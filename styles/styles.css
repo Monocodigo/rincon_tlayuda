@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Fjalla+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap');
+.logo_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #faf3c8;
+    border-radius: 10px;
+}
+.banner_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    
+}
+
+.logo_banner{
+    width: 9.375rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.titulo_banner{
+    font-family:"Epunda Slab", serif;
+    font-size: 2rem;
+    color: #333;
+    text-align: left;
+    margin: 0;
+}
+
+.subtitulo_banner{
+    font-family:"Epunda Slab", serif;
+    font-size: 1rem;
+    color: #e9a105;
+    text-align: left;
+    margin: 0;
+}
+.texto_productos{
+    font-family:"Fjalla One", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 2%;
+}
+.menu{
+    height: 40rem;
+    width: auto;
+    margin: auto;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h2{
+    text-align: center;
+    margin: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+}
+
+.carousel {
+    width: 800px;
+    height: 600px;
+    margin: 2rem auto; /* centers the carousel */
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures images fill the area without distortion */
+}
+/* Mission & Vision */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9ff;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #f5ef41 0%, #efb668 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(199, 83, 6, 0.621);
+}
