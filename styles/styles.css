@@ -1,44 +1,116 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Fjalla+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap');
 .logo_container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
     padding: 1rem;
-    background-color: #faf3c8;
-    border-radius: 10px;
+    background-color: #6B2D5C;
+    
 }
-.banner_text{
+
+.logo_and_text {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* space between logo and text */
+}
+
+.logo_banner {
+    width: 4rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.banner_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     height: 100%;
+}
+
+.titulo_banner {
+    font-family: "Epunda Slab", serif;
+    font-size: 2rem;
+    color: #F9F6F2;
+    text-align: left;
+    margin: 0;
+}
+
+.subtitulo_banner {
+    font-family: "Epunda Slab", serif;
+    font-size: 1rem;
+    color: #fffb1c;
+    text-align: left;
+    margin: 0;
+}
+
+/* Botón hamburguesa */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: #F26C2D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: #F26C2D;
+    transform: translateY(-2px);
+}
+
+.dropdown-btn::after {
+    content: "▼";
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn.active::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #F26C2D;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5%;
+  font-family: sans-serif;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+    color: whitesmoke;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+    border-radius: 10px;
     
 }
 
-.logo_banner{
-    width: 9.375rem;
-    height: auto;
-    border-radius: 50%;
-}
-
-.titulo_banner{
-    font-family:"Epunda Slab", serif;
-    font-size: 2rem;
-    color: #333;
-    text-align: left;
-    margin: 0;
-}
-
-.subtitulo_banner{
-    font-family:"Epunda Slab", serif;
-    font-size: 1rem;
+.dropdown-content a:hover {
+    background: black;
     color: #e9a105;
-    text-align: left;
-    margin: 0;
 }
+
 .texto_productos{
     font-family:"Fjalla One", sans-serif;
     font-size: 2rem;
@@ -56,7 +128,7 @@
 body{
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    background-image: url("/imagenes/fondo.png");
 }
 
 h2{
@@ -71,17 +143,23 @@ h2{
     width: 800px;
     height: 600px;
     margin: 2rem auto; /* centers the carousel */
+    
+    
 }
 
 .carousel-inner {
     width: 100%;
     height: 100%;
+    border: 2rem #6B2D5C
 }
 
 .carousel-inner img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* ensures images fill the area without distortion */
+    border-radius: 5%;
+
+    
 }
 /* Mission & Vision */
 .mission-vision {
