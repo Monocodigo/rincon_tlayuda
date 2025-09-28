@@ -1,8 +1,11 @@
 const dropdownBtn = document.getElementById('dropdownBtn');
 const dropdownContent = document.getElementById('dropdownContent');
+const imagenes = document.querySelectorAll('.img');
+const imgModal = document.querySelector('#imgModal');
+
 
 // ===== FUNCIONALIDAD DEL MENÚ DESPLEGABLE =====
-    
+if (dropdownBtn && dropdownContent) {
     // Toggle del dropdown al hacer clic en el botón
     dropdownBtn.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -27,22 +30,39 @@ const dropdownContent = document.getElementById('dropdownContent');
         dropdownContent.classList.remove('show');
         dropdownBtn.classList.remove('active');
     }
+}
 
-    document.querySelectorAll('.dropdown-content a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                // Scroll suave hacia la sección
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+//Movimiento del header
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Smooth scroll for menu links
+document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').startsWith('#') ? this.getAttribute('href').slice(1) : null;
+        if (targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                const header = document.getElementById('main-header');
+                const headerHeight = header.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10; // 10px extra space
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
-            
-            // Cerrar dropdown después de hacer clic
-            closeDropdown();
-        });
+        }
     });
+});
+
+imagenes.forEach(img => {
+    img.addEventListener('click', (e) => {
+        imgModal.src = e.target.src;
+        e.target.setAttribute('data-toggle', 'modal')
+        e.target.setAttribute('data-target', '#exampleModal')
+    });
+});
