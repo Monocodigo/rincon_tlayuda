@@ -150,7 +150,7 @@
 body{
     padding-top: 150px;
     line-height: 1.6;
-    background-image: url("/imagenes/fondo.png");
+    background-image: url("../imagenes/fondo.png");
 }
 /*Estilo del carrusel*/
 .carousel {

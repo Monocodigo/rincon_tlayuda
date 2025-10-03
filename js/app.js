@@ -1,3 +1,4 @@
+//VARIABLES
 const dropdownBtn = document.getElementById('dropdownBtn');
 const dropdownContent = document.getElementById('dropdownContent');
 const imagenes = document.querySelectorAll('.img');
@@ -58,7 +59,7 @@ document.querySelectorAll('.menu-link').forEach(link => {
         }
     });
 });
-
+//Código para la galería
 imagenes.forEach(img => {
     img.addEventListener('click', (e) => {
         imgModal.src = e.target.src;
